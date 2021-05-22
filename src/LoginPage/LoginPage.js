@@ -18,11 +18,7 @@ export const LoginPage = () => {
     email: "rashita.neog@gmail.com",
     password: "Rashita@neog"
   };
-  useEffect(() => {
-    const loginStatus = JSON.parse(localStorage?.getItem("ProArtLogin"));
-    loginStatus?.login && setLogin(true);
-    navigate(state?.from ? state.from : "/");
-  }, []);
+  
   const submitHandler = () => {
     if (!login) {
       if (email === user.email && password === user.password) {
