@@ -1,0 +1,11 @@
+.no-page-div {
+  padding-top: 5rem;
+  min-height: 100vh;
+}
+.oops-text {
+  color: #20a546;
+}
+.Links-from-404 {
+  text-decoration: underline;
+  color: #20a546;
+}

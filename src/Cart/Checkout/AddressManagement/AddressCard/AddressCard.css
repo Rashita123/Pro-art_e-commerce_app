@@ -1,0 +1,25 @@
+.address-card {
+  text-align: left;
+  border: 1px solid grey;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+.address-card-name {
+  font-weight: bold;
+}
+.address-card-mob {
+  background: #a7f3d0;
+  color: black;
+  padding: 3px;
+  border-radius: 5px;
+}
+.address-card-buttons {
+  display: flex;
+}
+
+@media only screen and (min-width: 600px) {
+  .address-card {
+    width: 50%;
+    margin: 1rem auto;
+  }
+}

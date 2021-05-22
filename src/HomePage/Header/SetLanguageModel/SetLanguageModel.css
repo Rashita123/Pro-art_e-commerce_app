@@ -1,0 +1,55 @@
+.model-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+}
+.select-language-model {
+  position: absolute;
+  width: 400px;
+  height: 250px;
+  margin: auto;
+  background: #22303c;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.model-heading {
+  padding: 5px 18px;
+  font-size: 18px;
+}
+select {
+  padding: 0.5rem 1.5rem;
+}
+.model-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  padding: 1rem 2rem;
+}
+.model-buttons button {
+  margin: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.model-secondary-button {
+  background: #8899a6;
+  color: black;
+}
+
+.model-primary-button {
+  color: #8899a6;
+  background: transparent;
+}

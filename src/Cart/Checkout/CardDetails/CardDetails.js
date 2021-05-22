@@ -1,0 +1,36 @@
+import "./CardDetails.css";
+import { Button } from "forkui-lib";
+import { useMyReducer } from "../../../stateContext";
+import { useLangContext } from "../../../AllContext/languageContext";
+import { useEffect, useRef } from "react";
+import { CalcTotalPriceOfCart } from "../../../Logic/CalcTotalPriceOfCart";
+export const CardDetails = () => {
+  const cardRef = useRef(null);
+  const { state } = useMyReducer();
+  const { language } = useLangContext();
+  useEffect(() => {
+    cardRef.current.focus();
+  }, []);
+  return (
+    <div className="card-details">
+      <span className="payment-heading">{language.paymentDetails}</span>
+      <form className="card-details-form">
+        <input
+          className="big-input"
+          ref={cardRef}
+          placeholder={language.cardHolderName}
+        ></input>
+        <br />
+        <input className="big-input" placeholder={language.cardNumber}></input>
+        <br />
+        <input className="small-input" placeholder={language.date}></input>
+        <input className="small-input" placeholder={language.CVV}></input>
+        <br />
+        <Button
+          margin="2rem"
+          text={`${language.pay} ₹${CalcTotalPriceOfCart(state.cartList)}`}
+        />
+      </form>
+    </div>
+  );
+};

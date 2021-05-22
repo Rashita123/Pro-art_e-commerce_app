@@ -1,0 +1,28 @@
+.wishlist-page {
+  max-width: 80%;
+  margin: auto;
+  padding-top: 5rem;
+  min-height: 100vh;
+  height: 100%;
+}
+.wishlist-listing {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.wishlist-center-text {
+  display: block;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+@media only screen and (max-width: 600px) {
+  .wishlist-page {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .wishlist-listing {
+    grid-template-columns: 50% 50%;
+  }
+}

@@ -1,0 +1,17 @@
+.footer {
+  background: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #374151;
+}
+.footer__title {
+  font-size: 1.5rem;
+}
+.socials {
+  margin: 1rem;
+  cursor: pointer;
+}
+.socials > * {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #374151;
+}

@@ -1,0 +1,12 @@
+fieldset {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 93%;
+  box-sizing: border-box;
+}
+fieldset label {
+  margin: 0.5rem;
+  cursor: pointer;
+}
