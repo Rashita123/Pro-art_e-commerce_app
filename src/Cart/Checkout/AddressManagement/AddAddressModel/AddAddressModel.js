@@ -21,19 +21,6 @@ export const AddAddressModel = ({
     setState(stateSelected);
   };
   const submitNewAddress = () => {
-    console.log([
-      ...addresses,
-      {
-        id: addresses.length + 1,
-        country,
-        state,
-        name,
-        address,
-        city,
-        zip,
-        mob
-      }
-    ]);
     setAddresses([
       ...addresses,
       {
