@@ -25,11 +25,13 @@ export const WishCard = (item) => {
         </Link>
         <div className="product-name-and-desc">
           <Link to={`/products/${id}`}>
-            <h3 style={{ margin: 0, color: "inherit" }}>{productName}</h3>
+            <h3 className="product-name-style">{productName}</h3>
 
             <div className="price-details">
               <strong>Rs. {price}</strong>
-              <strike style={{ color: "inherit" }}>Rs. {originalPrice}</strike>
+              <strike className="price-strike-style">
+                Rs. {originalPrice}
+              </strike>
               <span className="red-text">
                 ({(originalPrice - price) / 100}% off)
               </span>

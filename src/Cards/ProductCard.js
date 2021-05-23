@@ -31,11 +31,11 @@ export const ProductCard = (item) => {
 
         <div className="product-name-and-desc">
           <Link to={`/products/${id}`}>
-            <h3 style={{ margin: 0, color: "inherit" }}>{productName}</h3>
+            <h3 className="product-name-style">{productName}</h3>
             <br />
             <div className="price-details">
               <strong>Rs. {price}</strong>
-              <strike style={{ color: "inherit", marginLeft: "0.5rem" }}>
+              <strike className="price-strike-style">
                 Rs. {originalPrice}
               </strike>
               <br />
