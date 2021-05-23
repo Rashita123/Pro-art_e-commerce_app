@@ -73,7 +73,7 @@ export const SignUpPage = () => {
           type="password"
           required
         ></input>
-        {!valid && <p style={{ color: "red" }}>E-mail already in use</p>}
+        {!valid && <p className="red-text">E-mail already in use</p>}
         <div className="sign-up-buttons">
           <Button
             margin="1rem"

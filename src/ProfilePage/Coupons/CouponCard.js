@@ -23,11 +23,7 @@ export const CouponCard = ({ coupon }) => {
             Expiry: <strong>{coupon.expiry}</strong> | 11:30:00 P.M.
           </span>
           {showDetails && (
-            <span
-              style={{ color: "#6B7280", fontSize: "13px", marginTop: "4px" }}
-            >
-              {coupon.details}
-            </span>
+            <span className="coupon-details-style">{coupon.details}</span>
           )}
         </div>
         <div

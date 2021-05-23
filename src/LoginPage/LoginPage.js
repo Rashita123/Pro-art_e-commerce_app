@@ -18,7 +18,7 @@ export const LoginPage = () => {
     email: "rashita.neog@gmail.com",
     password: "Rashita@neog"
   };
-  
+
   const submitHandler = () => {
     if (!login) {
       if (email === user.email && password === user.password) {
@@ -81,9 +81,7 @@ export const LoginPage = () => {
             <label>Remember Me</label>
           </div>
         )}
-        {showWrongPassword && (
-          <p style={{ color: "red" }}>Incorrect Password</p>
-        )}
+        {showWrongPassword && <p className="red-text">Incorrect Password</p>}
         <Button
           margin="1rem"
           isDisabled={showWrongPassword}
