@@ -20,6 +20,9 @@ a {
 .product-name-style {
   margin: 0;
 }
+.price-strike-style {
+  margin-left: 0.5rem;
+}
 .product-name-and-desc {
   margin: 0.5rem 0.5rem;
   flex-grow: 3;

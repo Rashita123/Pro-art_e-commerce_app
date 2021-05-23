@@ -31,7 +31,7 @@ export const CartCard = (item) => {
 
             <div className="price-details">
               <strong>Rs. {price}</strong>
-              <strike style={{ marginLeft: "0.5rem" }}>
+              <strike className="price-strike-style">
                 Rs. {originalPrice}
               </strike>
               <span className="red-text">
