@@ -27,7 +27,7 @@ export const CartCard = (item) => {
         </Link>
         <div className="product-name-and-desc">
           <Link to={`/products/${id}`}>
-            <h3 style={{ margin: 0 }}>{productName}</h3>
+            <h3 className="product-name-style">{productName}</h3>
 
             <div className="price-details">
               <strong>Rs. {price}</strong>
