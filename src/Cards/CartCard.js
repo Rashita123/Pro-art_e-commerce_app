@@ -4,7 +4,7 @@ import { BsTrashFill } from "react-icons/bs";
 import { BsPlus } from "react-icons/bs";
 import { FiMinus } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import { useLangContext } from "../AllContext/languageContext";
+import { useLanguageContext } from "../AllContext/languageContext";
 export const CartCard = (item) => {
   const {
     id,
@@ -17,7 +17,7 @@ export const CartCard = (item) => {
     quantity
   } = item;
   const { dispatch } = useMyReducer();
-  const { language } = useLangContext();
+  const { language } = useLanguageContext();
   const moveToWishListFromCartHandler = (id) => {
     dispatch({
       type: "update-wishlist",

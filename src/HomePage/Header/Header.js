@@ -1,5 +1,5 @@
 import "./Header.css";
-import { useLangContext } from "../../AllContext/languageContext";
+import { useLanguageContext } from "../../AllContext/languageContext";
 import { useState } from "react";
 import { HiOutlineTranslate } from "react-icons/hi";
 import { Link } from "react-router-dom";
@@ -18,7 +18,7 @@ import { AiFillFire } from "react-icons/ai";
 export const Header = () => {
   const { login, setLogin } = useLoginContext();
   const [showLangModel, setShowLangModel] = useState(false);
-  const { language, setLanguage } = useLangContext();
+  const { language, setLanguage } = useLanguageContext();
   const { theme, setTheme } = useThemeContext();
   const [displaySidebar, setDisplaySidebar] = useState(false);
   const { state } = useMyReducer();

@@ -1,8 +1,8 @@
 import "./SetLanguageModel.css";
-import { useLangContext } from "../../../AllContext/languageContext";
+import { useLanguageContext } from "../../../AllContext/languageContext";
 import { useState } from "react";
 export const SetLanguageModel = ({ setShowLangModel }) => {
-  const { setLanguageString } = useLangContext();
+  const { setLanguageString } = useLanguageContext();
   const [selectedLang, setSelectedLang] = useState("English");
   const setnewlang = () => {
     setLanguageString(selectedLang);

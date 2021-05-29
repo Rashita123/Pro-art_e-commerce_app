@@ -1,8 +1,8 @@
 import "./Hero.css";
 import { Link } from "react-router-dom";
-import { useLangContext } from "../../AllContext/languageContext";
+import { useLanguageContext } from "../../AllContext/languageContext";
 export const Hero = () => {
-  const { language } = useLangContext();
+  const { language } = useLanguageContext();
   return (
     <div className="hero-div">
       <div className="title-and-quote">

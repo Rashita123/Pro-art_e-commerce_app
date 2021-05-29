@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { useMyReducer } from "../stateContext";
-import { useLangContext } from "../AllContext/languageContext";
+import { useLanguageContext } from "../AllContext/languageContext";
 
 import { AiOutlineHeart } from "react-icons/ai";
 import { AiFillHeart } from "react-icons/ai";
@@ -20,7 +20,7 @@ export const ProductCard = (item) => {
   } = item;
   const [wished, setWished] = useState(false);
   const { dispatch } = useMyReducer();
-  const { language } = useLangContext();
+  const { language } = useLanguageContext();
   return (
     <div className="card">
       <div className="product-details">

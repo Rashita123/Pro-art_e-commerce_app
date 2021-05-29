@@ -1,7 +1,7 @@
 import "./Cart.css";
 import { Link } from "react-router-dom";
 import { useMyReducer } from "../stateContext";
-import { useLangContext } from "../AllContext/languageContext";
+import { useLanguageContext } from "../AllContext/languageContext";
 import { CartCard } from "../Cards/CartCard";
 import { CalcTotalPriceOfCart } from "../Logic/CalcTotalPriceOfCart";
 import { calculateLengthOfCart } from "../Logic/CalcLengthOfCart";
@@ -9,7 +9,7 @@ import { OrderDetails } from "./OrderDetails/OrderDetails";
 import { AiOutlineHeart } from "react-icons/ai";
 import { FaChevronRight } from "react-icons/fa";
 export const Cart = () => {
-  const { language } = useLangContext();
+  const { language } = useLanguageContext();
   const { state } = useMyReducer();
   return (
     <div className="cart-page">

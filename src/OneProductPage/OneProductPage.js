@@ -5,10 +5,10 @@ import { Badge, Button } from "forkui-lib";
 import { useState } from "react";
 import { NoMatch } from "../NoMatch404/NoMatch";
 import { Link } from "react-router-dom";
-import { useLangContext } from "../AllContext/languageContext";
+import { useLanguageContext } from "../AllContext/languageContext";
 import "./OneProductPage.css";
 export const OneProductPage = () => {
-  const { language } = useLangContext();
+  const { language } = useLanguageContext();
   const [quantity, setQuantity] = useState(1);
   const setProductQuantity = (e) => {
     const value = e.target.value;

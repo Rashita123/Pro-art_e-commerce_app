@@ -4,7 +4,7 @@ import App from "./App";
 import { ReducerProvider } from "./stateContext";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeContextProvider } from "./AllContext/themeContext";
-import { LangContextProvider } from "./AllContext/languageContext";
+import { LanguageContextProvider } from "./AllContext/languageContext";
 import { LoginContextProvider } from "./AllContext/LoginContext";
 import { AddressContextProvider } from "./AllContext/AddressContext";
 const rootElement = document.getElementById("root");
@@ -12,7 +12,7 @@ ReactDOM.render(
   <StrictMode>
     <BrowserRouter>
       <ThemeContextProvider>
-        <LangContextProvider>
+        <LanguageContextProvider>
           <ReducerProvider>
             <LoginContextProvider>
               <AddressContextProvider>
@@ -20,7 +20,7 @@ ReactDOM.render(
               </AddressContextProvider>
             </LoginContextProvider>
           </ReducerProvider>
-        </LangContextProvider>
+        </LanguageContextProvider>
       </ThemeContextProvider>
     </BrowserRouter>
   </StrictMode>,

@@ -1,6 +1,6 @@
 import "./SignUpPage.css";
 import { useRef, useEffect, useState } from "react";
-import { useLangContext } from "../AllContext/languageContext";
+import { useLanguageContext } from "../AllContext/languageContext";
 import { useLoginContext } from "../AllContext/LoginContext";
 import { Button } from "forkui-lib";
 import { Link, useNavigate } from "react-router-dom";
@@ -11,7 +11,7 @@ export const SignUpPage = () => {
     usernameRef.current.focus();
   }, []);
   const navigate = useNavigate();
-  const { language } = useLangContext();
+  const { language } = useLanguageContext();
   const { login, setLogin, users, setUsers } = useLoginContext();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");

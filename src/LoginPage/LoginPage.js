@@ -1,12 +1,12 @@
 import "./LoginPage.css";
 import { Button } from "forkui-lib";
-import { useLangContext } from "../AllContext/languageContext";
+import { useLanguageContext } from "../AllContext/languageContext";
 import { useState, useRef, useEffect } from "react";
 import { useLoginContext } from "../AllContext/LoginContext";
 import { useLocation, useNavigate, Link } from "react-router-dom";
 export const LoginPage = () => {
   const { login, setLogin } = useLoginContext();
-  const { language } = useLangContext();
+  const { language } = useLanguageContext();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const { state } = useLocation();

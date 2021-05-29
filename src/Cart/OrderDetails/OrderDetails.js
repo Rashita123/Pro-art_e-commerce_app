@@ -1,13 +1,13 @@
 import "./OrderDetails.css";
 import { calculateLengthOfCart } from "../../Logic/CalcLengthOfCart";
 import { useMyReducer } from "../../stateContext";
-import { useLangContext } from "../../AllContext/languageContext";
+import { useLanguageContext } from "../../AllContext/languageContext";
 import { CalcOriginalPriceOfCart } from "../../Logic/CalcTotalPriceOfCart";
 import { CalcTotalPriceOfCart } from "../../Logic/CalcTotalPriceOfCart";
 import { Link } from "react-router-dom";
 export const OrderDetails = () => {
   const { state } = useMyReducer();
-  const { language } = useLangContext();
+  const { language } = useLanguageContext();
   return (
     <div className="order_details-div">
       <div

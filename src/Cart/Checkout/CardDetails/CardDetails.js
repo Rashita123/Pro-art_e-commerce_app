@@ -1,13 +1,13 @@
 import "./CardDetails.css";
 import { Button } from "forkui-lib";
 import { useMyReducer } from "../../../stateContext";
-import { useLangContext } from "../../../AllContext/languageContext";
+import { useLanguageContext } from "../../../AllContext/languageContext";
 import { useEffect, useRef } from "react";
 import { CalcTotalPriceOfCart } from "../../../Logic/CalcTotalPriceOfCart";
 export const CardDetails = () => {
   const cardRef = useRef(null);
   const { state } = useMyReducer();
-  const { language } = useLangContext();
+  const { language } = useLanguageContext();
   useEffect(() => {
     cardRef.current.focus();
   }, []);
