@@ -43,7 +43,6 @@ span * {
   color: black;
 }
 .sidebar {
-  /* margin-top: -1.15rem; */
   position: fixed;
   background: white;
   top: 0;
@@ -98,14 +97,6 @@ span * {
   position: relative;
 }
 .nav-icons__badge {
-  /* background: #20a546;
-  position: absolute;
-  top: -0.4rem;
-  right: -0.8rem;
-  border-radius: 50%;
-  padding: 0.1rem 0.3rem;
-  color: white;
-  font-size: 0.7rem; */
   position: absolute;
   top: -0.4rem;
   right: -0.9rem;
