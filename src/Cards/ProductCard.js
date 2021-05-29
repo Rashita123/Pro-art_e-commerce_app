@@ -21,6 +21,9 @@ export const ProductCard = (item) => {
   const [wished, setWished] = useState(false);
   const { dispatch } = useMyReducer();
   const { language } = useLanguageContext();
+  const getPercentageOff = (originalPrice, price) => {
+    return Math.floor((originalPrice - price) / 100);
+  };
   return (
     <div className="card">
       <div className="product-details">
@@ -38,13 +41,8 @@ export const ProductCard = (item) => {
               <strike className="price-strike-style">
                 Rs. {originalPrice}
               </strike>
-              <br />
               <span className="red-text">
-                (
-                {`${Math.floor((originalPrice - price) / 100)}% ${
-                  language.off
-                }`}
-                )
+                {getPercentageOff(originalPrice, price)}% {language.off}
               </span>
             </div>
           </Link>
