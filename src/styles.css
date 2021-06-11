@@ -6,6 +6,9 @@ body {
 * {
   box-sizing: border-box;
 }
+:root {
+  --primary-green-color: #20a546;
+}
 .App {
   font-family: sans-serif;
   text-align: center;

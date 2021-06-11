@@ -5,7 +5,7 @@ export const CouponsDB = [
     minPurchase: 1200,
     code: "FOOTWEAR4U",
     expiry: "MAY 31 2021",
-    details: "Rs. 300 off on minimum purchase of Rs. 1200",
+    offAmount: 300,
     used: false
   },
   {
@@ -14,7 +14,7 @@ export const CouponsDB = [
     minPurchase: 1000,
     code: "WFEXTRA150",
     expiry: "MAY 31 2021",
-    details: "Rs. 150 off on minimum purchase of Rs. 1000",
+    offAmount: 150,
     used: false
   },
   {
@@ -23,7 +23,7 @@ export const CouponsDB = [
     minPurchase: 1500,
     code: "PUMAEXTRA100",
     expiry: "MAY 31 2021",
-    details: "Rs. 100 off on minimum purchase of Rs. 1500",
+    offAmount: 100,
     used: false
   }
 ];

@@ -69,6 +69,13 @@
   font-size: 13px;
   margin-top: 4px;
 }
+.copy-button {
+  background: transparent;
+  position: absolute;
+  border-radius: 2px;
+  right: 1rem;
+  cursor: pointer;
+}
 @media only screen and (min-width: 600px) {
   .each-coupon-div {
     width: 50%;
