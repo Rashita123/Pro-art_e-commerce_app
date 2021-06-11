@@ -52,7 +52,7 @@ export const OrderDetails = () => {
           {couponDiscount === 0 ? (
             language.applyCoupon
           ) : (
-            <span>-₹.{couponDiscount}</span>
+            <span>-₹{couponDiscount}</span>
           )}
         </span>
       </div>
@@ -71,7 +71,7 @@ export const OrderDetails = () => {
 
       <div className="order_details__row order_details__total-div">
         <span>{language.totalAmount}</span>
-        <span>₹{CalcTotalPriceOfCart(state.cartList)-couponDiscount}</span>
+        <span>₹{CalcTotalPriceOfCart(state.cartList) - couponDiscount}</span>
       </div>
       <Link to="/address-management">
         <button className="cart__order-button button-in-desktop-view">
