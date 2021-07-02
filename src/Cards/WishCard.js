@@ -3,6 +3,7 @@ import { useMyReducer } from "../stateContext";
 import { BsTrashFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useLanguageContext } from "../AllContext/languageContext";
+import { getPercentageOff } from "../Logic/getPercentageOff";
 export const WishCard = (item) => {
   const {
     id,
@@ -40,7 +41,7 @@ export const WishCard = (item) => {
                 Rs. {originalPrice}
               </strike>
               <span className="red-text">
-                ({(originalPrice - price) / 100}% off)
+                {getPercentageOff(originalPrice, price)}% {language.off}
               </span>
             </div>
           </Link>

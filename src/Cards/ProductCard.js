@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import { useMyReducer } from "../stateContext";
 import { useLanguageContext } from "../AllContext/languageContext";
+import { getPercentageOff } from "../Logic/getPercentageOff";
 
 import { AiOutlineHeart } from "react-icons/ai";
 import { AiFillHeart } from "react-icons/ai";
@@ -21,9 +22,7 @@ export const ProductCard = (item) => {
   const [wished, setWished] = useState(false);
   const { dispatch } = useMyReducer();
   const { language } = useLanguageContext();
-  const getPercentageOff = (originalPrice, price) => {
-    return Math.floor((originalPrice - price) / 100);
-  };
+
   return (
     <div className="card">
       <div className="product-details">
