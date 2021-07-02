@@ -6,11 +6,9 @@ import { Link } from "react-router-dom";
 export const ApplyCouponModel = ({ setShowCouponModel, applyCoupon }) => {
   const [couponEntered, setCouponEntered] = useState("");
   const changeDiscount = () => {
-    console.log(couponEntered);
     const couponSelected = CouponsDB.find(
       (coupon) => coupon.code === couponEntered
     );
-    console.log(couponSelected);
     applyCoupon(couponSelected.offAmount);
   };
   return (

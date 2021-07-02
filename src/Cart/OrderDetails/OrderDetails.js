@@ -1,6 +1,7 @@
 import "./OrderDetails.css";
 import { useState } from "react";
 import { CouponsDB } from "../../CouponsDB";
+import { FaTimes } from "react-icons/fa";
 import { calculateLengthOfCart } from "../../Logic/CalcLengthOfCart";
 import { useMyReducer } from "../../stateContext";
 import { useLanguageContext } from "../../AllContext/languageContext";
@@ -45,14 +46,24 @@ export const OrderDetails = () => {
 
       <div className="order_details__row">
         <span>{language.couponDiscount}</span>
-        <span
-          className="make-cursor-pointer"
-          onClick={() => setShowCouponModel(true)}
-        >
+        <span>
           {couponDiscount === 0 ? (
-            language.applyCoupon
+            <span
+              className="make-cursor-pointer"
+              onClick={() => setShowCouponModel(true)}
+            >
+              {language.applyCoupon}
+            </span>
           ) : (
-            <span>-₹{couponDiscount}</span>
+            <span>
+              <span>-₹{couponDiscount}</span>
+              <span
+                className="make-cursor-pointer"
+                onClick={() => setCouponDiscount(0)}
+              >
+                <FaTimes />
+              </span>
+            </span>
           )}
         </span>
       </div>
