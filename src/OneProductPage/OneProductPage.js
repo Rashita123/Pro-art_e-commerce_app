@@ -37,7 +37,7 @@ export const OneProductPage = () => {
           <br />
           <br />
           <Link to={`/seller`}>
-            <span className="seller-details">{item.seller}</span>
+            <span className="seller-details">{item.seller.shopName}</span>
           </Link>
           <hr />
           <div className="price-div tag-div">

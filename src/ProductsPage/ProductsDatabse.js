@@ -20,7 +20,13 @@ export const ProductsDatabase = [
     price: 2450,
     originalPrice: 3999,
     newFlag: true,
-    seller: "Amano Craft Studio"
+    seller: {
+      shopName: "Amano Craft Studio",
+      bannerImage: "https://i.etsystatic.com/isbl/973a53/49598845/isbl_1680x420.49598845_a2kytipy.jpg?version=0",
+      logoImage: "https://i.etsystatic.com/isla/05b8c3/48443313/isla_280x280.48443313_l19ff5bw.jpg?version=0",
+      tagLine: "Hand made goodies just for you!",
+      salesCount: 301,
+    }
   },
   {
     id: 2,
@@ -58,7 +64,13 @@ export const ProductsDatabase = [
     price: 3500,
     originalPrice: 4999,
     newFlag: false,
-    seller: "Studio Niani"
+    seller: {
+      shopName: "Studio Niani",
+      bannerImage: "https://i.etsystatic.com/isbl/122d24/45460960/isbl_1680x420.45460960_74q7cwkx.jpg?version=0",
+      logoImage: "https://i.etsystatic.com/isla/16760a/49396977/isla_280x280.49396977_25l1qrc4.jpg?version=0",
+      tagLine: "Modern and elegant handmade jewelry & Art",
+      salesCount: 945,
+    }
   },
   {
     id: 3,
@@ -90,8 +102,14 @@ export const ProductsDatabase = [
     WORLD WIDE DELIVERIES : All orders are delivered to your address in 2-3 business days by DHL and UPS`,
     price: 4500,
     originalPrice: 5000,
-    newFlag: false,
-    seller: "Maxpamser"
+    newFlag: false, 
+    seller: {
+      shopName: "Maxpamser",
+      bannerImage: "https://i.etsystatic.com/isbl/01c67c/46787846/isbl_1680x420.46787846_68axkpup.jpg?version=0",
+      logoImage: "https://i.etsystatic.com/isla/cbea6c/46802226/isla_280x280.46802226_mf0rjt6x.jpg?version=0",
+      tagLine: "Ditching the clutter to create a minimalist home~Olivia",
+      salesCount: 742,
+    }
   },
   {
     id: 4,
@@ -120,7 +138,13 @@ export const ProductsDatabase = [
     price: 5299,
     originalPrice: 6400,
     newFlag: true,
-    seller: "Garden Metal Art"
+    seller: {
+      shopName: "Garden Metal Art",
+      bannerImage: "https://i.etsystatic.com/isbl/bca93c/48996165/isbl_1680x420.48996165_215eyn9t.jpg?version=0",
+      logoImage: "https://i.etsystatic.com/isbl/bca93c/48996165/isbl_1680x420.48996165_215eyn9t.jpg?version=0",
+      tagLine: "",
+      salesCount: 1600,
+    }
   },
   {
     id: 5,
@@ -133,7 +157,13 @@ export const ProductsDatabase = [
     price: 2479,
     originalPrice: 3500,
     newFlag: false,
-    seller: "BrightStyleByLori"
+    seller: {
+      shopName: "BrightStyleByLori",
+      bannerImage: "https://i.etsystatic.com/isbl/a9cb54/49363910/isbl_1680x420.49363910_9r4cw0f8.jpg?version=0",
+      logoImage: "https://i.etsystatic.com/isla/08b760/48057173/isla_280x280.48057173_o04lqp1q.jpg?version=0",
+      tagLine: "Unique handmade clay statement earrings",
+      salesCount: 3401,
+    }
   },
   {
     id: 6,
@@ -148,7 +178,13 @@ export const ProductsDatabase = [
     price: 5450,
     originalPrice: 7000,
     newFlag: false,
-    seller: "ShaelynDesignsStore"
+    seller: {
+      shopName: "ShaelynDesignsStore",
+      bannerImage: "https://i.etsystatic.com/ishbs/5eaf0b/1710640075/ishbs_1680x224.1710640075_dnoawl6a.jpg?version=0",
+      logoImage: "https://i.etsystatic.com/isla/224a0d/32817674/isla_280x280.32817674_acrlxgoq.jpg?version=0",
+      tagLine: "Polymer clay earrings, handmade in rural NSW Australia.",
+      salesCount: 640,
+    }
   },
   {
     id: 7,
@@ -167,7 +203,13 @@ export const ProductsDatabase = [
     price: 4500,
     originalPrice: 5699,
     newFlag: true,
-    seller: "ViolaBBijoux"
+    seller: {
+      shopName: "ViolaBBijoux",
+      bannerImage: "",
+      logoImage: "https://i.etsystatic.com/isla/604af5/47007537/isla_280x280.47007537_r1lcgh0f.jpg?version=0",
+      tagLine: "Bijoux faits à la main, En France ♡",
+      salesCount: 85,
+    }
   },
   {
     id: 8,
@@ -182,7 +224,13 @@ export const ProductsDatabase = [
     price: 3479,
     originalPrice: 4299,
     newFlag: true,
-    seller: "OfClay"
+    seller: {
+      shopName: "OfClay",
+      bannerImage: "",
+      logoImage: "https://i.etsystatic.com/isla/5a80bb/43652025/isla_280x280.43652025_lvxa7wdr.jpg?version=0",
+      tagLine: "Eclectic + Minimal Clay Jewelry Handmade in Portland",
+      salesCount: 312,
+    }
   },
   {
     id: 9,
@@ -202,7 +250,13 @@ export const ProductsDatabase = [
     price: 1479,
     originalPrice: 2999,
     newFlag: true,
-    seller: "Cherry Casa"
+    seller: {
+      shopName: "Cherry Casa",
+      bannerImage: "https://i.etsystatic.com/ishbca/c379f0/3131995703/ishbca_840x420.3131995703_mmkp1h0b.jpg?version=0",
+      logoImage: "https://i.etsystatic.com/isla/d1ff4c/45055985/isla_280x280.45055985_3izodxnc.jpg?version=0",
+      tagLine: "Modern handmade accessories",
+      salesCount: 2209,
+    }
   },
   {
     id: 10,
@@ -225,6 +279,12 @@ export const ProductsDatabase = [
     price: 479,
     originalPrice: 999,
     newFlag: false,
-    seller: "LunaGreyStudio"
+    seller: {
+      shopName: "LunaGreyStudio",
+      bannerImage: "https://i.etsystatic.com/isbl/191920/50016225/isbl_1680x420.50016225_nj8rt7fs.jpg?version=0",
+      logoImage: "https://i.etsystatic.com/isla/f8d8c1/50016047/isla_280x280.50016047_b9w8zt7r.jpg?version=0",
+      tagLine: "Polymer Clay Jewellery & Supplies",
+      salesCount: 842,
+    }
   }
 ];
