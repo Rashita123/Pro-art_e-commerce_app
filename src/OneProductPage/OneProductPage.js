@@ -36,7 +36,7 @@ export const OneProductPage = () => {
           />
           <br />
           <br />
-          <Link to={`/seller`}>
+          <Link to={`/seller/${item.seller.shopId}`}>
             <span className="seller-details">{item.seller.shopName}</span>
           </Link>
           <hr />

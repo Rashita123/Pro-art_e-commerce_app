@@ -153,7 +153,7 @@ export const ProductsDatabase = [
       bannerImage:
         "https://i.etsystatic.com/isbl/bca93c/48996165/isbl_1680x420.48996165_215eyn9t.jpg?version=0",
       logoImage:
-        "https://i.etsystatic.com/isbl/bca93c/48996165/isbl_1680x420.48996165_215eyn9t.jpg?version=0",
+        "https://i.etsystatic.com/isla/488bfd/42039939/isla_280x280.42039939_bxm37jk1.jpg?version=0",
       tagLine: "",
       salesCount: 1600
     }
