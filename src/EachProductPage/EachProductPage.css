@@ -31,7 +31,7 @@
 .product-name {
   font-size: 25px;
   line-height: 1.45;
-  color: #20a546;
+  color: var(--primary-green-color);
   margin-bottom: 1rem;
   margin-right: 0.5rem;
   font-weight: 400;
@@ -49,7 +49,7 @@
   padding-right: 12px;
   vertical-align: baseline;
   white-space: nowrap;
-  color: #20a546;
+  color: var(--primary-green-color);
   font-weight: 600;
   font-style: normal;
   font-size: 18px;

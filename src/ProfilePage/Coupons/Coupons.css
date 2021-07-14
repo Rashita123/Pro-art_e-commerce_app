@@ -28,7 +28,7 @@
   align-items: center;
   border-right: 1px solid #d4d5d9;
   padding: 1rem;
-  color: #20a546;
+  color: var(--primary-green-color);
   font-weight: bold;
 }
 .off-description-div {

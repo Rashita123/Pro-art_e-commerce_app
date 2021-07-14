@@ -25,7 +25,7 @@
 }
 .login-page input:focus {
   outline: none;
-  border-bottom: 2px solid #20a546;
+  border-bottom: 2px solid var(--primary-green-color);
 }
 .login-page input::placeholder {
   font-weight: 300;
@@ -39,5 +39,5 @@
   width: 300px;
 }
 .sign-up-from-login a {
-  color: #20a546;
+  color: var(--primary-green-color);
 }

@@ -4,7 +4,7 @@
   min-height: 100vh;
 }
 .add-new-div {
-  color: #20a546;
+  color: var(--primary-green-color);
   text-transform: uppercase;
   font-size: 15px;
   text-align: left;
@@ -12,7 +12,7 @@
   box-shadow: 0px 1px 3px rgb(40 44 63 / 30%);
   padding: 17px 10px;
   cursor: pointer;
-  border: 1px solid #20a546;
+  border: 1px solid var(--primary-green-color);
   border-radius: 2px;
 }
 .address-each-card {

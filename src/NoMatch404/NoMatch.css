@@ -3,9 +3,9 @@
   min-height: 100vh;
 }
 .oops-text {
-  color: #20a546;
+  color: var(--primary-green-color);
 }
 .Links-from-404 {
   text-decoration: underline;
-  color: #20a546;
+  color: var(--primary-green-color);
 }
