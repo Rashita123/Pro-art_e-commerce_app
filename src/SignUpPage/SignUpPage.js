@@ -13,24 +13,21 @@ export const SignUpPage = () => {
   const navigate = useNavigate();
   const { language } = useLanguageContext();
   const { login, setLogin, users, setUsers } = useLoginContext();
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const initialUserDetails = { username: "", email: "", password: "" };
+  const [newUserDetails, setNewUserDetails] = useState(initialUserDetails);
   const [valid, setValid] = useState(true);
   const resetInputFields = () => {
-    setUsername("");
-    setEmail("");
-    setPassword("");
+    setNewUserDetails(initialUserDetails);
   };
-  const submitNewUser = (username, email, password) => {
-    const userAlreadyInDB = users.find((user) => user.email === email);
+  const submitNewUser = (newUserDetails) => {
+    const userAlreadyInDB = users.find(
+      (user) => user.email === newUserDetails.email
+    );
     if (userAlreadyInDB) {
       setValid(false);
     } else {
-      setUsers([...users, { username, email, password }]);
-      setUsername("");
-      setEmail("");
-      setPassword("");
+      setUsers([...users, newUserDetails]);
+      setNewUserDetails(initialUserDetails);
       setLogin(true);
       navigate("/");
     }
@@ -38,12 +35,12 @@ export const SignUpPage = () => {
   return (
     <div className="sign-up-page">
       <div className="sign-up-top-div">
-        <h3>Create A new Account</h3>
+        <h3>Create a new Account</h3>
         <input
           ref={usernameRef}
-          value={username}
+          value={newUserDetails.username}
           onChange={(e) => {
-            setUsername(e.target.value);
+            setNewUserDetails({ ...newUserDetails, username: e.target.value });
           }}
           className="big-input"
           type="text"
@@ -52,10 +49,10 @@ export const SignUpPage = () => {
         />
 
         <input
-          value={email}
+          value={newUserDetails.email}
           onChange={(e) => {
             setValid(true);
-            setEmail(e.target.value);
+            setNewUserDetails({ ...newUserDetails, email: e.target.value });
           }}
           className="big-input"
           placeholder={language.eMail}
@@ -64,9 +61,9 @@ export const SignUpPage = () => {
         />
 
         <input
-          value={password}
+          value={newUserDetails.password}
           onChange={(e) => {
-            setPassword(e.target.value);
+            setNewUserDetails({ ...newUserDetails, password: e.target.value });
           }}
           className="big-input"
           placeholder={language.password}
@@ -78,7 +75,7 @@ export const SignUpPage = () => {
           <Button
             margin="1rem"
             text={language.submit}
-            onClickHandler={() => submitNewUser(username, email, password)}
+            onClickHandler={() => submitNewUser(newUserDetails)}
           />
           <Button
             margin="1rem"
