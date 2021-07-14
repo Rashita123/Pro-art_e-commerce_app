@@ -24,7 +24,7 @@ export const Header = () => {
   const { theme, setTheme } = useThemeContext();
   const [displaySidebar, setDisplaySidebar] = useState(false);
   const { state } = useMyReducer();
-  const toggleModeHandler = () => {
+  const toggleMode = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
   };
   return (
@@ -117,7 +117,7 @@ export const Header = () => {
           }
         </span>
         <span>
-          <div onClick={toggleModeHandler} className={`toggle toggle-${theme}`}>
+          <div onClick={toggleMode} className={`toggle toggle-${theme}`}>
             <div className={`circle circle-${theme}`}></div>
           </div>
         </span>

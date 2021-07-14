@@ -17,7 +17,7 @@ export const WishCard = (item) => {
   } = item;
   const { dispatch } = useMyReducer();
   const { language } = useLanguageContext();
-  const moveToCartFromWishListHandler = (id) => {
+  const moveToCartFromWishList = (id) => {
     dispatch({
       type: "add-new-cart-item",
       payload: { item: item, id: id, quantity: 1 }
@@ -49,7 +49,7 @@ export const WishCard = (item) => {
         <div className="product-buttons wishlist-remove-flex">
           <button
             onClick={() => {
-              moveToCartFromWishListHandler(id);
+              moveToCartFromWishList(id);
             }}
           >
             {language.moveToCart}
