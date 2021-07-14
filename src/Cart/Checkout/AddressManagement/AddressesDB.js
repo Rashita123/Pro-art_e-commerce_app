@@ -7,7 +7,7 @@ export const AddressesDB = [
     state: "Punjab",
     country: "India",
     zip: 152001,
-    mob: 9877651233
+    mobileNumber: 9877651233
   },
   {
     id: 2,
@@ -17,6 +17,6 @@ export const AddressesDB = [
     state: "Punjab",
     country: "India",
     zip: 152004,
-    mob: 9807865672
+    mobileNumber: 9807865672
   }
 ];

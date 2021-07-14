@@ -8,7 +8,7 @@ export const AddressCard = ({
   state,
   country,
   zip,
-  mob
+  mobileNumber
 }) => {
   return (
     <div className="address-card">
@@ -16,7 +16,7 @@ export const AddressCard = ({
       <label for={name}>
         <>
           <span className="address-card-name">{name}</span>
-          <span className="address-card-mob">{mob}</span>
+          <span className="address-card-mob">{mobileNumber}</span>
           <p>
             {address}, {city}, {state}, {country}
           </p>

@@ -30,7 +30,7 @@ export const Addresses = () => {
             <br />
             <span>{address.country}</span>
             <span>
-              {address.zip}, {address.mob}
+              {address.zip}, {address.mobileNumber}
             </span>
             <br />
           </div>

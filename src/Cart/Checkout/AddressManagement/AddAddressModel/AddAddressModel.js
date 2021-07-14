@@ -16,7 +16,7 @@ export const AddAddressModel = ({
     address: null,
     city: null,
     zip: null,
-    mob: null
+    mobileNumber: null
   };
   const [newAddress, setNewAddress] = useState(initialAddress);
   const updateState = (stateSelected) => {
@@ -74,7 +74,9 @@ export const AddAddressModel = ({
       />
       <br />
       <input
-        onChange={(e) => setNewAddress({ ...newAddress, mob: e.target.value })}
+        onChange={(e) =>
+          setNewAddress({ ...newAddress, mobileNumber: e.target.value })
+        }
         type="tel"
         pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
         placeholder="Enter Mobile Number"
