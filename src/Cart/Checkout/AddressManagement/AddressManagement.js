@@ -3,9 +3,8 @@ import { AddAddressModel } from "./AddAddressModel/AddAddressModel";
 import { AddressCard } from "./AddressCard/AddressCard";
 import { Button } from "forkui-lib";
 import { useState } from "react";
-import { useLanguageContext } from "../../../AllContext/languageContext";
+import { useLanguageContext, useAddressContext } from "../../../AllContext";
 import { Link } from "react-router-dom";
-import { useAddressContext } from "../../../AllContext/AddressContext";
 export const AddressManagement = () => {
   const { language } = useLanguageContext();
   const { addresses, setAddresses } = useAddressContext();

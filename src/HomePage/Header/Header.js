@@ -1,5 +1,9 @@
 import "./Header.css";
-import { useLanguageContext } from "../../AllContext/languageContext";
+import {
+  useLanguageContext,
+  useThemeContext,
+  useLoginContext
+} from "../../AllContext";
 import { useState } from "react";
 import { HiOutlineTranslate } from "react-icons/hi";
 import { Link } from "react-router-dom";
@@ -9,11 +13,9 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { BiShoppingBag } from "react-icons/bi";
 import { useMyReducer } from "../../stateContext";
 import { Avatar } from "forkui-lib";
-import { useThemeContext } from "../../AllContext/themeContext";
-import { calculateLengthOfCart } from "../../Logic/CalcLengthOfCart";
+import { CalculateLengthOfCart } from "../../Logic";
 import { SetLanguageModel } from "./SetLanguageModel/SetLanguageModel";
 import { Button } from "forkui-lib";
-import { useLoginContext } from "../../AllContext/LoginContext";
 import { AiFillFire } from "react-icons/ai";
 export const Header = () => {
   const { login, setLogin } = useLoginContext();
@@ -103,9 +105,9 @@ export const Header = () => {
           }
         </span>
         <span className="nav-icon">
-          {calculateLengthOfCart(state.cartList) !== 0 && (
+          {CalculateLengthOfCart(state.cartList) !== 0 && (
             <span className="nav-icons__badge">
-              {calculateLengthOfCart(state.cartList)}
+              {CalculateLengthOfCart(state.cartList)}
             </span>
           )}
           {

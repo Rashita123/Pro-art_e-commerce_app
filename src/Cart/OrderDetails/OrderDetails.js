@@ -2,11 +2,11 @@ import "./OrderDetails.css";
 import { useState } from "react";
 import { CouponsDB } from "../../CouponsDB";
 import { FaTimes } from "react-icons/fa";
-import { calculateLengthOfCart } from "../../Logic/CalcLengthOfCart";
+import { CalculateLengthOfCart } from "../../Logic";
 import { useMyReducer } from "../../stateContext";
-import { useLanguageContext } from "../../AllContext/languageContext";
-import { CalcOriginalPriceOfCart } from "../../Logic/CalcTotalPriceOfCart";
-import { CalcTotalPriceOfCart } from "../../Logic/CalcTotalPriceOfCart";
+import { useLanguageContext } from "../../AllContext";
+import { CalculateOriginalPriceOfCart } from "../../Logic";
+import { CalculateTotalPriceOfCart } from "../../Logic";
 import { ApplyCouponModel } from "./ApplyCouponModel/ApplyCouponModel";
 import { Link } from "react-router-dom";
 export const OrderDetails = () => {
@@ -25,22 +25,22 @@ export const OrderDetails = () => {
         className="order_details__row order_details__title-row"
       >
         <p>
-          {language.priceDetails} ({calculateLengthOfCart(state.cartList)}{" "}
+          {language.priceDetails} ({CalculateLengthOfCart(state.cartList)}{" "}
           {language.item})
         </p>
       </div>
 
       <div className="order_details__row">
         <span>{language.totalMRP}</span>
-        <span>₹{CalcOriginalPriceOfCart(state.cartList)}</span>
+        <span>₹{CalculateOriginalPriceOfCart(state.cartList)}</span>
       </div>
 
       <div className="order_details__row">
         <span>{language.discountOnMRP}</span>
         <span>
           -₹
-          {CalcOriginalPriceOfCart(state.cartList) -
-            CalcTotalPriceOfCart(state.cartList)}
+          {CalculateOriginalPriceOfCart(state.cartList) -
+            CalculateTotalPriceOfCart(state.cartList)}
         </span>
       </div>
 
@@ -82,7 +82,9 @@ export const OrderDetails = () => {
 
       <div className="order_details__row order_details__total-div">
         <span>{language.totalAmount}</span>
-        <span>₹{CalcTotalPriceOfCart(state.cartList) - couponDiscount}</span>
+        <span>
+          ₹{CalculateTotalPriceOfCart(state.cartList) - couponDiscount}
+        </span>
       </div>
       <Link to="/address-management">
         <button className="cart__order-button button-in-desktop-view">

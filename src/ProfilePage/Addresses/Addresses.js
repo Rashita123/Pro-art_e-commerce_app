@@ -1,5 +1,5 @@
 import "./Addresses.css";
-import { useAddressContext } from "../../AllContext/AddressContext";
+import { useAddressContext } from "../../AllContext";
 import { AddAddressModel } from "../../Cart/Checkout/AddressManagement/AddAddressModel/AddAddressModel";
 import { useState } from "react";
 export const Addresses = () => {

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import { useMyReducer } from "../stateContext";
 import { useLanguageContext } from "../AllContext/languageContext";
-import { getPercentageOff } from "../Logic/getPercentageOff";
+import { GetPercentageOff } from "../Logic";
 
 import { AiOutlineHeart } from "react-icons/ai";
 import { AiFillHeart } from "react-icons/ai";
@@ -41,7 +41,7 @@ export const ProductCard = (item) => {
                 Rs. {originalPrice}
               </strike>
               <span className="red-text">
-                {getPercentageOff(originalPrice, price)}% {language.off}
+                {GetPercentageOff(originalPrice, price)}% {language.off}
               </span>
             </div>
           </Link>

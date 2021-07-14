@@ -1,9 +1,9 @@
 import "./CardDetails.css";
 import { Button } from "forkui-lib";
 import { useMyReducer } from "../../../stateContext";
-import { useLanguageContext } from "../../../AllContext/languageContext";
+import { useLanguageContext } from "../../../AllContext";
 import { useEffect, useRef } from "react";
-import { CalcTotalPriceOfCart } from "../../../Logic/CalcTotalPriceOfCart";
+import { CalculateTotalPriceOfCart } from "../../../Logic";
 export const CardDetails = () => {
   const cardRef = useRef(null);
   const { state } = useMyReducer();

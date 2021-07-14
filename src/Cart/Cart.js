@@ -1,10 +1,10 @@
 import "./Cart.css";
 import { Link } from "react-router-dom";
 import { useMyReducer } from "../stateContext";
-import { useLanguageContext } from "../AllContext/languageContext";
-import { CartCard } from "../Cards/CartCard";
-import { CalcTotalPriceOfCart } from "../Logic/CalcTotalPriceOfCart";
-import { calculateLengthOfCart } from "../Logic/CalcLengthOfCart";
+import { useLanguageContext } from "../AllContext";
+import { CartCard } from "../Cards";
+import { CalculateTotalPriceOfCart } from "../Logic";
+import { CalculateLengthOfCart } from "../Logic";
 import { OrderDetails } from "./OrderDetails/OrderDetails";
 import { AiOutlineHeart } from "react-icons/ai";
 import { FaChevronRight } from "react-icons/fa";
@@ -14,7 +14,7 @@ export const Cart = () => {
   return (
     <div className="cart-page">
       <h2>
-        {language.cart} ({calculateLengthOfCart(state.cartList)})
+        {language.cart} ({CalculateLengthOfCart(state.cartList)})
       </h2>
       <br />
       <div className="left-cart">
@@ -42,7 +42,7 @@ export const Cart = () => {
 
         <div className="cart-page__total">
           <div className="cart__price-details-link">
-            <span>₹{CalcTotalPriceOfCart(state.cartList)}</span>
+            <span>₹{CalculateTotalPriceOfCart(state.cartList)}</span>
             <a href="#order_details">{language.viewDetails}</a>
           </div>
 
@@ -53,7 +53,7 @@ export const Cart = () => {
           </Link>
         </div>
 
-        {calculateLengthOfCart(state.cartList) !== 0 && <OrderDetails />}
+        {CalculateLengthOfCart(state.cartList) !== 0 && <OrderDetails />}
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import "./EachSellerPage.css";
-import { ProductCard } from "../Cards/ProductCard";
+import { ProductCard } from "../Cards";
 import { useParams } from "react-router-dom";
-import { ProductsDatabase } from "../ProductsPage/ProductsDatabse";
+import { ProductsDatabase } from "../ProductsPage";
 export const EachSellerPage = () => {
   const backupBannerImage =
     "https://image.freepik.com/free-vector/elegant-white-background-with-shiny-lines_1017-17580.jpg";

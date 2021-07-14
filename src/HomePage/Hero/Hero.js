@@ -1,6 +1,6 @@
 import "./Hero.css";
 import { Link } from "react-router-dom";
-import { useLanguageContext } from "../../AllContext/languageContext";
+import { useLanguageContext } from "../../AllContext";
 export const Hero = () => {
   const { language } = useLanguageContext();
   return (

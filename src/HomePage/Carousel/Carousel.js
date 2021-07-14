@@ -1,6 +1,6 @@
 import "./Carousel.css";
 import { useState } from "react";
-import { ProductsDatabase } from "../../ProductsPage/ProductsDatabse";
+import { ProductsDatabase } from "../../ProductsPage";
 import { BiChevronLeft } from "react-icons/bi";
 import { BiChevronRight } from "react-icons/bi";
 export const Carousel = () => {

@@ -1,5 +1,5 @@
 import "./SetLanguageModel.css";
-import { useLanguageContext } from "../../../AllContext/languageContext";
+import { useLanguageContext } from "../../../AllContext";
 import { useState } from "react";
 export const SetLanguageModel = ({ setShowLangModel }) => {
   const { setLanguageString } = useLanguageContext();

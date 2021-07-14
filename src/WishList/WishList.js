@@ -1,5 +1,5 @@
 import "./WishList.css";
-import { WishCard } from "../Cards/WishCard";
+import { WishCard } from "../Cards";
 import { useMyReducer } from "../stateContext";
 export const WishList = () => {
   const { state } = useMyReducer();

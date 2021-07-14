@@ -5,7 +5,7 @@ import { BsPlus } from "react-icons/bs";
 import { FiMinus } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { useLanguageContext } from "../AllContext/languageContext";
-import { getPercentageOff } from "../Logic/getPercentageOff";
+import { GetPercentageOff } from "../Logic";
 export const CartCard = (item) => {
   const {
     id,
@@ -43,7 +43,7 @@ export const CartCard = (item) => {
                 Rs. {originalPrice}
               </strike>
               <span className="red-text">
-                {getPercentageOff(originalPrice, price)}% {language.off}
+                {GetPercentageOff(originalPrice, price)}% {language.off}
               </span>
             </div>
           </Link>
