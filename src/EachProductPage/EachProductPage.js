@@ -1,13 +1,13 @@
+import "./EachProductPage.css";
 import { useParams } from "react-router-dom";
-import { ProductsDatabase } from "../ProductsPage/ProductsDatabse";
+import { ProductsDatabase } from "../ProductsPage";
 import { useMyReducer } from "../stateContext";
 import { Badge, Button } from "forkui-lib";
 import { useState } from "react";
-import { NoMatch } from "../NoMatch404/NoMatch";
+import { NoMatch } from "../NoMatch404";
 import { Link } from "react-router-dom";
-import { useLanguageContext } from "../AllContext/languageContext";
-import "./OneProductPage.css";
-export const OneProductPage = () => {
+import { useLanguageContext } from "../AllContext";
+export const EachProductPage = () => {
   const { language } = useLanguageContext();
   const [quantity, setQuantity] = useState(1);
   const setProductQuantity = (e) => {

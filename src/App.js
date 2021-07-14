@@ -1,22 +1,19 @@
 import "./styles.css";
 import { Cart } from "./Cart/Cart";
-import { ProductsPage } from "./ProductsPage/ProductsPage";
-import { WishList } from "./WishList/WishList";
-import { HomePage } from "./HomePage/HomePage";
-import { Header } from "./HomePage/Header/Header";
-import { OneProductPage } from "./OneProductPage/OneProductPage";
+import { ProductsPage } from "./ProductsPage";
+import { WishList } from "./WishList";
+import { HomePage, Header } from "./HomePage";
+import { EachProductPage } from "./EachProductPage";
 import { CardDetails } from "./Cart/Checkout/CardDetails/CardDetails";
-import { NoMatch } from "./NoMatch404/NoMatch";
-import { useThemeContext } from "./AllContext/themeContext";
+import { NoMatch } from "./NoMatch404";
+import { useThemeContext } from "./AllContext";
 import { Routes, Route } from "react-router-dom";
-import { LoginPage } from "./LoginPage/LoginPage";
+import { LoginPage } from "./LoginPage";
 import { PrivateRoute } from "./PrivateRoute";
 import { AddressManagement } from "./Cart/Checkout/AddressManagement/AddressManagement";
-import { Addresses } from "./ProfilePage/Addresses/Addresses";
-import { SignUpPage } from "./SignUpPage/SignUpPage";
-import { EachSellerPage } from "./EachSellerPage/EachSellerPage";
-import { Profile } from "./ProfilePage/Profile/Profile";
-import { Coupons } from "./ProfilePage/Coupons/Coupons";
+import { SignUpPage } from "./SignUpPage";
+import { EachSellerPage } from "./EachSellerPage";
+import { Coupons, Profile, Addresses } from "./ProfilePage";
 export default function App() {
   const { theme } = useThemeContext();
   return (
@@ -27,7 +24,7 @@ export default function App() {
         <PrivateRoute path="/cart" element={<Cart />} />
         <Route path="/products" element={<ProductsPage />} />
         <PrivateRoute path="/wishlist" element={<WishList />} />
-        <Route path="/products/:id" element={<OneProductPage />} />
+        <Route path="/products/:id" element={<EachProductPage />} />
         <PrivateRoute path="/card-details" element={<CardDetails />} />
         <Route path="/seller/:id" element={<EachSellerPage />} />
         <Route path="/login" element={<LoginPage />} />

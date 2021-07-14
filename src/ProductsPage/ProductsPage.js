@@ -1,8 +1,8 @@
 import "./ProductsPage.css";
-import { ProductCard } from "../Cards/ProductCard";
+import { ProductCard } from "../Cards";
 import { useMyReducer } from "../stateContext";
-import { SortByPriceFieldSet } from "./SortBy/SortByPrice/SortByPriceFieldSet";
-import { FilterByNew } from "./FilterBy/FilterByNew/FilterByNew";
+import { SortByPriceFieldSet } from "./SortBy";
+import { FilterByNew } from "./FilterBy";
 export const ProductsPage = () => {
   const { state, dispatch } = useMyReducer();
 

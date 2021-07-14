@@ -1,4 +1,4 @@
-export const calculateLengthOfCart = (cart) => {
+export const CalculateLengthOfCart = (cart) => {
   let length = 0;
   cart.map((item) => {
     length += item.quantity;

@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 import { createContext, useContext } from "react";
-import { ProductsDatabase } from "./ProductsPage/ProductsDatabse";
+import { ProductsDatabase } from "./ProductsPage";
 import { reducer } from "./stateReducer";
 export const ReducerContext = createContext();
 

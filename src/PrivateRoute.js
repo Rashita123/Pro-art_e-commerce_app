@@ -1,4 +1,4 @@
-import { useLoginContext } from "./AllContext/LoginContext";
+import { useLoginContext } from "./AllContext";
 import { Route, Navigate } from "react-router-dom";
 export const PrivateRoute = ({ path, ...props }) => {
   const { login } = useLoginContext();
