@@ -4,8 +4,7 @@ import { useAddressContext } from "../../AllContext";
 import { AddAddressModel } from "../../Cart/Checkout/AddressManagement/AddAddressModel/AddAddressModel";
 import { useState, useEffect } from "react";
 export const Addresses = () => {
-  // const { addresses, setAddresses } = useAddressContext();
-  const [addresses, setAddresses] = useState(null);
+  const { addresses, setAddresses } = useAddressContext();
   const [showAddAddressModel, setShowAddAddressModel] = useState(false);
   useEffect(() => {
     axios.get("https://proArt-BE.rashita.repl.co/address").then((response) => {
