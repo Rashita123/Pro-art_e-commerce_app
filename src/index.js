@@ -9,6 +9,7 @@ import {
   LanguageContextProvider,
   ThemeContextProvider
 } from "./AllContext";
+import { ScrollToTop } from "./ScrollToTop";
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.render(
           <ReducerProvider>
             <LoginContextProvider>
               <AddressContextProvider>
+                <ScrollToTop />
                 <App />
               </AddressContextProvider>
             </LoginContextProvider>
