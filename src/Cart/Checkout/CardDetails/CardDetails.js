@@ -28,7 +28,7 @@ export const CardDetails = () => {
         <br />
         <Button
           margin="2rem"
-          text={`${language.pay} ₹${CalcTotalPriceOfCart(state.cartList)}`}
+          text={`${language.pay} ₹${CalculateTotalPriceOfCart(state.cartList)}`}
         />
       </form>
     </div>
