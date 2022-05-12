@@ -1,0 +1,11 @@
+.no-page-div {
+  padding-top: 5rem;
+  min-height: 100vh;
+}
+.oops-text {
+  color: var(--primary-green-color);
+}
+.Links-from-404 {
+  text-decoration: underline;
+  color: var(--primary-green-color);
+}

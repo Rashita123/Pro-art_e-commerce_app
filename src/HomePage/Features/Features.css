@@ -1,0 +1,40 @@
+.feature {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: auto;
+  background: inherit;
+  color: inherit;
+}
+.feature > .heading {
+  font-size: 1em;
+  margin: 2em 0 1em 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: inherit;
+  letter-spacing: 1px;
+  background: inherit;
+}
+.feature > .content {
+  font-size: 0.9em;
+  color: #777;
+  background: inherit;
+  line-height: 1.9em;
+  letter-spacing: 1px;
+}
+
+/* for desktop */
+@media only screen and (min-width: 600px) {
+  .features {
+    display: flex;
+    justify-content: space-between;
+  }
+  .features-div {
+    background: inherit;
+  }
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+}

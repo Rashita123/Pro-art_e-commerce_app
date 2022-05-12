@@ -1,0 +1,57 @@
+.hero-div {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.pexels.com/photos/1154198/pexels-photo-1154198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.title-and-quote {
+  width: 80%;
+  margin: auto;
+}
+.title-and-quote > h1 {
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+.title-and-quote > p {
+  font-size: 1.5rem;
+  color: lightgrey;
+}
+.home-page-shop-button {
+  border-radius: 5px;
+  cursor: pointer;
+  background: var(--primary-green-color);
+  border: 2px solid var(--primary-green-color);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  font-size: 1.25rem;
+}
+.home-page-shop-button * {
+  color: white;
+  text-decoration: none;
+}
+.button:disabled:hover {
+  opacity: 0.4;
+}
+.button:focus {
+  box-shadow: 0 0 0 5px #a7f3d0;
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+.button:hover {
+  background: var(--primary-green-color);
+  opacity: 0.9;
+}
+
+@media only screen and (min-width: 600px) {
+  .hero-div {
+  }
+}

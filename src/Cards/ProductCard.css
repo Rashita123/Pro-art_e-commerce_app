@@ -1,0 +1,111 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.card {
+  color: inherit;
+  background: inherit;
+}
+.product-details {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  margin: 0.5rem;
+  justify-content: space-between;
+  min-height: 450px;
+  position: relative;
+  text-align: left;
+  cursor: pointer;
+}
+.product-name-style {
+  margin: 0;
+  color: inherit;
+}
+.price-strike-style {
+  margin-left: 0.5rem;
+  color: inherit;
+}
+.product-name-and-desc {
+  margin: 0.5rem;
+  flex-grow: 3;
+}
+
+.product-image {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+.red-text {
+  color: red;
+}
+
+.price-details {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.price-details > strong,
+strike,
+span {
+  margin-right: 0.35rem;
+}
+.price-details > strike {
+  text-decoration: line-through;
+}
+.float-new {
+  height: 25px;
+  width: 45px;
+  background: pink;
+  position: absolute;
+  top: 20px;
+  padding: 0.3rem 0 0.1rem 0.4rem;
+  color: black;
+}
+.cross {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  cursor: pointer;
+}
+.product-buttons {
+  display: flex;
+  align-items: center;
+}
+.card button {
+  flex-grow: 4;
+  background: transparent;
+  border: 1px solid grey;
+  margin: 0.25rem;
+  padding: 0.25rem;
+  max-height: 2.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: inherit;
+}
+
+.top-right-icon {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.25rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .product-image {
+    height: 250px;
+  }
+  .product-details {
+    margin: 0;
+    border: 1px solid lightgrey;
+    height: 400px;
+  }
+  .wishlist-remove-flex {
+    display: block;
+  }
+  .wishlist-remove-flex > button {
+    width: 95%;
+    margin: 5px auto;
+  }
+}

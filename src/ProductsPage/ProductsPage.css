@@ -1,0 +1,31 @@
+.products-page {
+  max-width: 90%;
+  margin: 0 auto;
+  height: 100%;
+  padding-top: 5rem;
+}
+.products-listing {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.products-listing span {
+  margin: 0;
+}
+
+.apply-filter-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  .products-page {
+    max-width: 100%;
+    margin: 0;
+  }
+  .products-listing {
+    grid-template-columns: 50% 50%;
+  }
+  .apply-filter-div {
+    display: block;
+  }
+}

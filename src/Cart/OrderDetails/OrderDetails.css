@@ -1,0 +1,32 @@
+.order_details-div {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+.order_details__title-row {
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid #d1d5db;
+  color: inherit;
+}
+.order_details__total-div {
+  font-weight: 600;
+  font-size: 15px;
+  padding-top: 16px;
+  border-top: 1px solid #d1d5db;
+  color: inherit;
+  line-height: 16px;
+}
+.order_details__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: inherit;
+  margin-bottom: 12px;
+  line-height: 16px;
+}
+.make-cursor-pointer {
+  cursor: pointer;
+}

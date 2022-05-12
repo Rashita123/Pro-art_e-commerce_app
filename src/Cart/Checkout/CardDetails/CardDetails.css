@@ -1,0 +1,37 @@
+.card-details {
+  padding-top: 5rem;
+  height: 100vh;
+}
+.payment-heading {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.card-details-form {
+  width: 80%;
+  margin: 2rem auto;
+}
+.card-details-form input {
+  transition: 0.5s ease-in;
+  margin: 0.5rem;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.card-details-form input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--primary-green-color);
+}
+.card-details-form input::placeholder {
+  font-weight: 300;
+  color: #9ca3af;
+}
+
+.big-input {
+  width: 300px;
+}
+.small-input {
+  width: 142px;
+}

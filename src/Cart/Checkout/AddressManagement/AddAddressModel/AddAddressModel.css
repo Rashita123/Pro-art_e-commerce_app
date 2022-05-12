@@ -1,0 +1,47 @@
+.address-management-model {
+  padding-top: 5rem;
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  bottom: 0;
+  background: white;
+  left: 0;
+  bottom: 5rem;
+  padding: 1rem;
+  min-height: 100vh;
+  min-height: 100%;
+  color: black;
+}
+.address-management-model input,
+select {
+  transition: 0.5s ease-in;
+  margin: 0.5rem;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 300px;
+}
+.address-management-model input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--primary-green-color);
+}
+.address-management-model input::placeholder {
+  font-weight: 300;
+  color: #9ca3af;
+}
+.address-management-model select:focus {
+  outline: none;
+  border-bottom: 2px solid var(--primary-green-color);
+}
+.address-management-model select::placeholder {
+  font-weight: 300;
+  color: #9ca3af;
+}
+.address-model-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

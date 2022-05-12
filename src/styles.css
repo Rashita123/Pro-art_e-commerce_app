@@ -1,0 +1,28 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+:root {
+  --primary-green-color: #20a546;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.App-light {
+  background: white;
+  color: black;
+  height: 100%;
+}
+.App-dark {
+  color: white;
+  background: #111827;
+  height: 100%;
+}
