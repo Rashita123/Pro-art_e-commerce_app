@@ -3,8 +3,9 @@ import { Button } from "forkui-lib";
 import { useLanguageContext, useLoginContext } from "../AllContext";
 import { useState, useRef, useEffect } from "react";
 import { useLocation, useNavigate, Link } from "react-router-dom";
+import axios from "axios";
 export const LoginPage = () => {
-  const { login, setLogin } = useLoginContext();
+  const { login, setLogin, user, setUser } = useLoginContext();
   const { language } = useLanguageContext();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -12,35 +13,38 @@ export const LoginPage = () => {
   const navigate = useNavigate();
   const emailInput = useRef(null);
   const [showWrongPassword, setShowWrongPassword] = useState(false);
-  const user = {
+  const currentUser = {
     username: "rashitamehta",
-    email: "rashita.neog@gmail.com",
+    email: "rashita@gmail.com",
     password: "Rashita@neog"
   };
 
-  const submitHandler = () => {
+  const submitHandler = async() => {
     if (!login) {
-      if (email === user.email && password === user.password) {
-        setLogin(true);
-        localStorage?.setItem("ProArtLogin", JSON.stringify({ login: true }));
-        setShowWrongPassword(false);
-        setEmail("");
-        setPassword("");
-        navigate(state?.from ? state.from : "/");
-      } else {
-        setShowWrongPassword(true);
-      }
-    } else {
-      if (email === user.email && password === user.password) {
-        setLogin(false);
-        localStorage.removeItem("ProArtLogin");
-        setShowWrongPassword(false);
-        setEmail("");
-        setPassword("");
-        navigate(state?.from ? state.from : "/");
-      } else {
-        setShowWrongPassword(true);
-      }
+      await axios.post('http://localhost:4000/users/login', {email, password})
+      .then(res => {
+        if (res.status === 200) {
+          console.log(res);
+          setLogin(true);
+          setUser({ id:id, email: res.data.email, username: res.data.email })
+          localStorage?.setItem("ProArtLogin", JSON.stringify({ login: true }));
+          setShowWrongPassword(false);
+          setEmail("");
+          setPassword("");
+          navigate(state?.from ? state.from : "/");
+        } else {
+          setShowWrongPassword(true);
+        }
+      })
+    }
+    else{
+      // change logout code.
+      setLogin(false);
+      localStorage.removeItem("ProArtLogin");
+      setShowWrongPassword(false);
+      setEmail("");
+      setPassword("");
+      navigate(state?.from ? state.from : "/");
     }
   };
   useEffect(() => {

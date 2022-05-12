@@ -4,6 +4,7 @@ import { useLanguageContext } from "../AllContext/languageContext";
 import { useLoginContext } from "../AllContext/LoginContext";
 import { Button } from "forkui-lib";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export const SignUpPage = () => {
   const usernameRef = useRef(null);
@@ -12,25 +13,27 @@ export const SignUpPage = () => {
   }, []);
   const navigate = useNavigate();
   const { language } = useLanguageContext();
-  const { login, setLogin, users, setUsers } = useLoginContext();
+  const { login, setLogin, user, setUser } = useLoginContext();
   const initialUserDetails = { username: "", email: "", password: "" };
   const [newUserDetails, setNewUserDetails] = useState(initialUserDetails);
   const [valid, setValid] = useState(true);
   const resetInputFields = () => {
     setNewUserDetails(initialUserDetails);
   };
-  const submitNewUser = (newUserDetails) => {
-    const userAlreadyInDB = users.find(
-      (user) => user.email === newUserDetails.email
-    );
-    if (userAlreadyInDB) {
-      setValid(false);
-    } else {
-      setUsers([...users, newUserDetails]);
-      setNewUserDetails(initialUserDetails);
-      setLogin(true);
-      navigate("/");
-    }
+  const submitNewUser = async (newUserDetails) => {
+    await axios.post('http://localhost:4000/users/register', newUserDetails)
+    .then(res => {
+        console.log(res)
+        if (res.status === 201) {
+          setNewUserDetails(initialUserDetails);
+          // setUsers()
+          setLogin(true);
+          navigate("/login");
+        } else {
+          console.log({res})
+          setValid(false);
+        }})
+    .catch(err => console.log(err))
   };
   return (
     <div className="sign-up-page">

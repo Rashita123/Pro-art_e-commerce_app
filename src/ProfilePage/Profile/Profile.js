@@ -5,12 +5,15 @@ import { GrFormNext } from "react-icons/gr";
 import { MdLocalOffer } from "react-icons/md";
 import { ImProfile } from "react-icons/im";
 import { Link } from "react-router-dom";
+import { useLoginContext } from "../../AllContext";
+
 export const Profile = () => {
+  const { user } = useLoginContext();
   return (
     <div className="profile-page">
       <div className="profile-card">
         <Image src="https://bit.ly/3qZAJqc" size="sm" />
-        <p>rashita.neog@gmail.com</p>
+        <p>{user.username}</p>
       </div>
       <div className="profile__additional-cards">
         <Link to="/profile/addresses">
